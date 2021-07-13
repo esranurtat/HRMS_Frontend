@@ -156,6 +156,7 @@ export default function RegisterEmployer() {
               </div>
             </Grid.Column>
 
+
             <Grid.Column width={8}>
               <div style={{marginTop:"1em"}}>
               <label><b>Web Sitesi</b> (http:// olmadan yazınız)</label>
