@@ -16,7 +16,7 @@ export default function EmployerDetail() {
     let employerService = new EmployerService();
     let jobAdService = new JobAdService();
     employerService
-      .getEmployerById(id)
+      .getByJobAdId(id)
       .then((result) => setEmployer(result.data.data));
     jobAdService
       .getActiveAdsByCompanyId(id)
@@ -55,7 +55,7 @@ export default function EmployerDetail() {
                 </Header.Content>
               </Header>
             </Table.Cell>
-            <Table.Cell>{employer.webSite}</Table.Cell>
+            <Table.Cell>{employer.webAdress}</Table.Cell>
           </Table.Row>
 
           <Table.Row>
@@ -93,8 +93,6 @@ export default function EmployerDetail() {
                 <Table.HeaderCell>İş Pozisyonu</Table.HeaderCell>
                 <Table.HeaderCell>Şehir</Table.HeaderCell>
                 <Table.HeaderCell>Açık Pozisyon</Table.HeaderCell>
-                <Table.HeaderCell>Çalışma Yeri</Table.HeaderCell>
-                <Table.HeaderCell>Çalışma Zamanı</Table.HeaderCell>
                 <Table.HeaderCell>Detaylar</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
@@ -104,11 +102,9 @@ export default function EmployerDetail() {
                 <Table.Row key={jobAd.id}>
                   <Table.Cell>{jobAd.jobPosition?.name}</Table.Cell>
                   <Table.Cell>{jobAd.city?.name}</Table.Cell>
-                  <Table.Cell>{jobAd.openPositions}</Table.Cell>
-                  <Table.Cell>{jobAd.workPlace?.name}</Table.Cell>
-                  <Table.Cell>{jobAd.workTime?.name}</Table.Cell>
+                  <Table.Cell>{jobAd.positionQuota}</Table.Cell>
                   <Table.Cell>
-                    <Button animated as={Link} to={`/jobads/${jobAd.id}`}>
+                    <Button animated as={Link} to={`/advertisements/${jobAd.id}`}>
                       <Button.Content visible>Detayları Gör</Button.Content>
                       <Button.Content hidden>
                         <Icon name="arrow right" />

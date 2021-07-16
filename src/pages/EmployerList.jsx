@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Table, Header, Icon, Button } from "semantic-ui-react";
 import EmployerService from "../../src/services/EmployerService";
 
@@ -37,7 +38,7 @@ export default function EmployerList() {
               <Table.Cell>{employer.email}</Table.Cell>
               <Table.Cell>{employer.phoneNumber}</Table.Cell>
               <Table.Cell>
-                <Button>View</Button>
+                <Button as={Link} to={"/employers/:id"}>View</Button>
               </Table.Cell>
             </Table.Row>
           ))}

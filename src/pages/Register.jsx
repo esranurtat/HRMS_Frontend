@@ -59,7 +59,7 @@ export default function Register() {
   return (
     <div>
       <Header as="h2" color="teal" textAlign="center">
-        <Image src="https://hrms.ph/img/logo-large.png" /> Kayıt Ol
+        <Image src="https://sbo2com.net/wp-content/uploads/2018/10/register-icon.png" /> Kayıt Ol
       </Header>
       <Form size="large" onSubmit={formik.handleSubmit}>
         <Segment stacked>

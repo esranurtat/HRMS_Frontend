@@ -1,58 +1,114 @@
-import React from "react";
-import {
-  Container,
-  Grid,
-  Header,
-  Icon,
-  List,
-  Segment,
-} from "semantic-ui-react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <div>
-      <Segment
-        color="black"
-        inverted
-        vertical
-        style={{
-          padding: "5em 0em",
-          position: "static",
-          bottom: 0,
-          width: "100%",
-          marginTop: "2em"
-        }}
-      >
-        <Container>
-          <Grid divided inverted stackable>
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <List link inverted>
-                  <List.Item as="a">Hakkımızda</List.Item>
-                  <List.Item as="a">İletişim</List.Item>
-                  <List.Item as="a">Çerezler</List.Item>
-                  <List.Item as="a">Gizlilik Politikası</List.Item>
-                </List>
-              </Grid.Column>
-              <Grid.Column width={13}>
-                <Header style={{ marginTop: "-1.2em" }} as="h2">
-                  <Container>
-                    <Icon name="users" color="grey" size="big" />
-                  </Container>
-                  <Header.Content>
-                    <font color="#f5f5f5">
-                    HRMS Esra Nur TAT
-                    </font>
-                  </Header.Content>
-                </Header>
-                <Container>
-                  © 2021 Human Resources Management System - Tüm hakları gizlidir
-                </Container>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
-      </Segment>
-    </div>
+    <footer className='container py-5 mt-5'>
+      <div className='row'>
+        <div className='col'>
+          <Link to='/' className='navbar-brand fs-2 fw-bold'>
+            HRMS <span className='text-secondary'>Project</span>
+          </Link>
+          <p className='text-muted'>
+          Bilginin efendisi olmak için çalışmanın uşağı, olmak şarttır. 
+          »»Balzac
+          </p>
+          <div className='text-center align-items-center'>
+            <a href='mailto:esranurtatoglu24@gmail.com' className='text-muted text-decoration-none link-muted'>
+              <i className='bi bi-envelope text-primary' /> mail@hrmsproject.com
+            </a>
+          </div>
+        </div>
+        <div className='col px-5'>
+          <p className='fw-bold fs-2 text-secondary'>Useful Links</p>
+          <ul className='list-group'>
+            <li className='list-group-item ps-0 border-0'>
+              <Link to='/' className='text-muted text-decoration-none'>
+                Find Job
+              </Link>
+            </li>
+            <li className='list-group-item ps-0 border-0'>
+              <Link to='/' className='text-muted text-decoration-none'>
+                Companies
+              </Link>
+            </li>
+            <li className='list-group-item ps-0 border-0'>
+              <Link to='/' className='text-muted text-decoration-none'>
+                About Us
+              </Link>
+            </li>
+            <li className='list-group-item ps-0 border-0'>
+              <Link to='/' className='text-muted text-decoration-none'>
+                Post a Job
+              </Link>
+            </li>
+            <li className='list-group-item ps-0 border-0'>
+              <Link to='/' className='text-muted text-decoration-none'>
+                Testimonial
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className='col px-5'>
+          <p className='fw-bold fs-2 text-secondary'>Job Titles</p>
+          <ul className='list-group'>
+            <li className='list-group-item ps-0 border-0'>
+              <Link to='/' className='text-muted text-decoration-none'>
+                Web Developer
+              </Link>
+            </li>
+            <li className='list-group-item ps-0 border-0'>
+              <Link to='/' className='text-muted text-decoration-none'>
+                Software Developer
+              </Link>
+            </li>
+            <li className='list-group-item ps-0 border-0'>
+              <Link to='/' className='text-muted text-decoration-none'>
+                UI/UX Designer
+              </Link>
+            </li>
+            <li className='list-group-item ps-0 border-0'>
+              <Link to='/' className='text-muted text-decoration-none'>
+                Graphics Designer
+              </Link>
+            </li>
+            <li className='list-group-item ps-0 border-0'>
+              <Link to='/' className='text-muted text-decoration-none'>
+                More
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className='col px-5'>
+          <p className='fw-bold fs-2 text-secondary'>Follow Us</p>
+          <ul className='list-group'>
+            <li className='list-group-item ps-0 border-0'>
+              <a href='https://www.linkedin.com/in/esra-nur-tat-4a4571206/' className='text-muted text-decoration-none' target='_blank' rel='noreferrer'>
+                LinkedIn
+              </a>
+            </li>
+            
+            <li className='list-group-item ps-0 border-0'>
+              <a href='https://www.instagram.com/esranurtat/' className='text-muted text-decoration-none' target='_blank' rel='noreferrer'>
+                Instagram
+              </a>
+            </li>
+
+            <li className='list-group-item ps-0 border-0'>
+              <a href='https://github.com/esranurtat' className='text-muted text-decoration-none' target='_blank' rel='noreferrer'>
+                GitHub
+              </a>
+            </li>
+
+            <li className='list-group-item ps-0 border-0'>
+              <a href='https://www.kodlama.io/' className='text-muted text-decoration-none' target='_blank' rel='noreferrer'>
+                kodlama.io
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </footer>
   );
 }
