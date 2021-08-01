@@ -1,3 +1,10 @@
+export default function Login() {
+  <div className='col'>
+    <p className='text-muted mt-4'>
+          Login page
+        </p>
+  </div>
+}
 /*
 import React from "react";
 import { Link, useHistory } from "react-router-dom";

@@ -10,8 +10,8 @@ export default function Footer() {
             HRMS <span className='text-secondary'>Project</span>
           </Link>
           <p className='text-muted'>
-          Bilginin efendisi olmak için çalışmanın uşağı, olmak şarttır. 
-          »»Balzac
+            Bilginin efendisi olmak için çalışmanın uşağı, olmak şarttır.
+            »»Balzac
           </p>
           <div className='text-center align-items-center'>
             <a href='mailto:esranurtatoglu24@gmail.com' className='text-muted text-decoration-none link-muted'>
@@ -87,7 +87,7 @@ export default function Footer() {
                 LinkedIn
               </a>
             </li>
-            
+
             <li className='list-group-item ps-0 border-0'>
               <a href='https://www.instagram.com/esranurtat/' className='text-muted text-decoration-none' target='_blank' rel='noreferrer'>
                 Instagram

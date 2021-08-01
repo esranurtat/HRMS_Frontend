@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle, faFilter, faLocationArrow } from "@fortawesome/free-solid-svg-icons";
-import "./Filters.css";
+import "./JobPostFilter.css";
 import React from "react";
 import { useSelector } from "react-redux";
 
